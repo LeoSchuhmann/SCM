@@ -55,4 +55,4 @@ def create_kpis(company):
 
     return kpis
 
-pp.pprint(create_kpis("mock1_2022"))
+pp.pprint(create_kpis("company_x"))
