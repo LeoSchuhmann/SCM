@@ -22,6 +22,9 @@ def create_kpis(company):
 
     top_vendor_quant = db.groupby('Vendor')['Quantity'].sum().nlargest(20).to_dict()
     kpis["top_vendor_byquant"] = (top_vendor_quant)
+
+    all_vendors = db['Vendor'].unique()
+    kpis["all_vendors"] = (all_vendors)
                                   
     #process mine the most common SC: THIS WOULD WORK IN THEORY BUT CURRENTLY THE DATA IS SO UNIQUE THAT 1 wins.
     db = db.sort_values('Delivery_Date')
