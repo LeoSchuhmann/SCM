@@ -11,9 +11,15 @@ pp = pprint.PrettyPrinter(indent=4)
 
 all_kpis = {}
 
-kpi_hcm = kpi_hcm("company_x")
-kpi_pur = kpi_pur("company_x")
-kpi_prod = kpi_prod("company_x")
+
+company = "Infineon"
+data_pur = pd.read_csv("Mock_data/SAP_Purchasing.csv", sep=",")
+data_prod = pd.read_csv("Mock_data/SAP_Production.csv", sep=",")
+data_hcm = pd.read_csv("./Mock_data/SAP_HCM.csv", sep=",")
+
+kpi_hcm = kpi_hcm(company, data_hcm)
+kpi_pur = kpi_pur(company, data_pur)
+kpi_prod = kpi_prod(company, data_prod)
 
 
 
