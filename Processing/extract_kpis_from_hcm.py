@@ -15,12 +15,14 @@ def create_kpis(company, db):
 
     #ez_mean_kpis
     avg_wage = db["Wage per year in euro"].mean()
+    min_wage = db["Wage per year in euro"].min()
     avg_sick_days = db["days sick"].mean()
     avg_age = db["age"].mean()
     avg_training_hours = db["training hours"].mean()
     avg_headcounts_in_upper_mgmt = db["upper management"].mean()
 
     kpis["avg_wage"] = (avg_wage)
+    kpis["min_wage"] = (min_wage)
     kpis["avg_sick_days"] = (avg_sick_days)
     kpis["avg_age"] = (avg_age)
     kpis["avg_training_hours"] = (avg_training_hours)
