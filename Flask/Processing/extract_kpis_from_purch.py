@@ -5,12 +5,11 @@ import pprint
 
 #pp = pprint.PrettyPrinter(indent=4)
 
-def create_kpis(company, db):
+def create_kpis(db):
     today = date.today()
     # mm/dd/y
     today = today.strftime("%m/%d/%Y")
     db = db
-    company = company
     kpis = {}
 
     #ez_mean_kpis

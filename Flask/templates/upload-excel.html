@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Upload your HCM export</title>
+</head>
+ 
+<body>
+    <h1>Upload your HCM, Purchasing, Production export CSV:</h1>
+    <form action="{{ url_for('view') }}" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" 
+            accept=".csv" multiple>
+        <input type="submit" value="Upload">
+    </form>
+</body>
+ 
+</html>
