@@ -1,1 +1,2 @@
 # SCM
+run main.py
