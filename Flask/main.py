@@ -2,6 +2,7 @@
 import pandas
 from flask import Flask, render_template, request, redirect, url_for
 from fileinput import filename
+import os
 
 from Processing.extract_kpis_from_hcm import create_kpis as create_kpis_hcm
 from Processing.extract_kpis_from_purch import create_kpis as create_kpis_pur
@@ -81,6 +82,16 @@ def risks():
 
 	df2 = pandas.concat([hcm, pur], axis=0)
 	df3 = pandas.concat([df2, prod], axis=0).reset_index().drop('index', axis=1)
+	df3.to_excel("Flask/risks/risks.xlsx")
+
+
+	os.remove(r'Flask/risks/HCM_risks.xlsx')
+	os.remove(r'Flask/risks/PROD_risks.xlsx')
+	os.remove(r'Flask/risks/PUR_risks.xlsx')
+	os.remove(r'Flask/data/SAP_HCM.csv')
+	os.remove(r'Flask/data/SAP_Production.csv')
+	os.remove(r'Flask/data/SAP_Purchasing.csv')
+	
 
 
 	return render_template('show_tables.html',  tables=[df3.to_html(classes='data')])
