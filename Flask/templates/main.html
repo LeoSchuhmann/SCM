@@ -1,13 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main</title>
-    <h2>Supplier Risk Monitor</h2>
+	<title>Sustainable Risk Manager</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+	<header>
+		<h1>Sustainable Risk Manager</h1>
+	</header>
+	<main>
+		<a href="{{ url_for('upload') }}">Upload Some Data</a>
+	</main>
 </body>
 </html>
+<style>
+    body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #007f8c;
+	color: white;
+	padding: 20px;
+	text-align: center;
+}
+
+main {
+	margin: 20px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+label {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+input {
+	padding: 10px;
+	border-radius: 5px;
+	border: none;
+	margin-bottom: 20px;
+}
+
+button {
+	background-color: #007f8c;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+#result {
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+</style>
