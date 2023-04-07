@@ -1,17 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
  
 <head>
-    <title>Upload your HCM export</title>
+    <title>SRM</title>
 </head>
  
 <body>
-    <h1>Upload your HCM, Purchasing, Production export CSV:</h1>
+    <div class="title"><h1>Upload your HCM, Purchasing, Production export CSV:</h1></div>
+    
+    <div class="input form">
     <form action="{{ url_for('view') }}" method="post" enctype="multipart/form-data">
         <input type="file" name="file" 
             accept=".csv" multiple>
+    
+    <div>
+        <input type="text" name="company" value="Company Name">
+        
+    </div>
         <input type="submit" value="Upload">
     </form>
+</div>
 </body>
  
 </html>
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 2em;
+  }
+  
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  input[type="file"] {
+    display: block;
+    margin-bottom: 1em;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 1em;
+  }
+  
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+</style>
