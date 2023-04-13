@@ -11,7 +11,7 @@ from Processing.risks import find_risks_hcm, find_risks_pur, find_risks_prod
 
 # Flask constructor
 app = Flask(__name__)
-
+#asd
 @app.get('/')
 def home():
 	return render_template('main.html')
